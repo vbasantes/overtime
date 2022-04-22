@@ -17,6 +17,7 @@ development:
 test:
   <<: *default
   database: overtime_test
+  # You may need to bring in the actual values if running db commands as Rails will not resolve the test and dev credentials at the same time 
   username: <%= Rails.application.credentials.db_test_username %>
   password: <%= Rails.application.credentials.db_test_password %>
   host: localhost
