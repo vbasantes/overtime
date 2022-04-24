@@ -11,6 +11,9 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
 
+    #Why is this not working?!
+    @post.user_id = current_user.id
+
     # We don't want a create template, we want to render a show template
     if @post.save
       redirect_to @post, notice: "Post created successfully"

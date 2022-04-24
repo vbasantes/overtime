@@ -8,6 +8,11 @@ require File.expand_path('../config/environment', __dir__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 require 'capybara/rails'
+
+# Provided by Devise to mimick logging in. Extends functionality of Capybara
+include Warden::Test::Helpers
+Warden.test_mode!
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
