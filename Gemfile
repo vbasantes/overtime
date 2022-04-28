@@ -34,6 +34,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0' # Test unit framework
   # gem 'capybara'
   gem 'database_cleaner' # Clean out database after each turn in test
+  gem 'factory_bot_rails'
 end
 
 group :development do
